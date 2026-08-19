@@ -1,0 +1,16 @@
+type,left,right,similarity,decision
+Company,Microsoft Corporation,Microsoft,1.0,MERGE_MANUAL
+Company,Amazon Web Services (AWS),Amazon Web Services,0.928739070892334,MERGE_VECTOR
+Company,Syndio,SYNLAB,0.7481774091720581,REJECT_GUARD
+Company,Syndio,Synopsys,0.7217695713043213,REJECT_GUARD
+Company,SYNLAB,Syniverse,0.7036418914794922,REJECT_GUARD
+Company,Samsung,Samsung Electronics,0.859984278678894,REJECT_GUARD
+Company,Samsung,Samsung Electronics Co. Ltd.,0.7206851840019226,REJECT_GUARD
+Company,Samsung Electronics Co. Ltd.,Samsung Electronics,0.8064500689506531,BELOW_THRESHOLD
+Company,ServiceNow,ServiceNow Ventures,0.7416782379150391,REJECT_GUARD
+Company,Syniverse,Synopsys,0.7519543766975403,REJECT_GUARD
+Technology,Cloud Services,cloud services like Amazon,0.8273621201515198,REJECT_GUARD
+Technology,Cloud Services,Google Cloud,0.7450253963470459,REJECT_GUARD
+Technology,Google Cloud Platform,Google Cloud,0.8921520113945007,BELOW_THRESHOLD
+Technology,Microsoft Infrastructure Solutions Partner Status,Microsoft Solutions Partner for Security,0.7123995423316956,REJECT_GUARD
+Technology,EU,EU users,0.748323917388916,REJECT_GUARD

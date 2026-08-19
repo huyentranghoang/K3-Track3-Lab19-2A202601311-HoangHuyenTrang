@@ -1,0 +1,93 @@
+id,group,question,reference_answer,flat_answer,graph_answer,flat_comprehensiveness,graph_comprehensiveness,flat_faithfulness,graph_faithfulness,flat_multi_hop_reasoning,graph_multi_hop_reasoning,flat_latency_s,graph_latency_s,flat_total_tokens,graph_total_tokens,flat_judge_rationale,graph_judge_rationale,graph_supernode_events
+G01,factoid,Who or what leads related to Artificial Intelligence?,Microsoft LEADS Artificial Intelligence.,"Based on the provided context, the following entities lead related to Artificial Intelligence:
+
+1. Charles Darwin University (CDU) [chunk_id=65c6413ef187c085a866fd7f::c0000 | date=2023-08-15 | score=0.592]
+2. Financial services institutions [chunk_id=65c63f87f187c085a866f8b1::c0000 | date=2023-07-01 | score=0.549]
+3. Companies that sell AI-related hardware, software, services, or expertise [chunk_id=65c6416df187c085a866fdfa::c0000 | date=2023-01-04 | score=0.535]
+4. Organisations that implement end-to-end automation using generative AI [chunk_id=65c63f87f187c085a866f8b1::c0000 | date=2023-07-01 | score=0.549]
+5. The technology industry [chunk_id=65c642d8f187c085a86702ad::c0000 | date=2023-07-01 | score=0.503]
+
+Note that the context does not provide a single entity that leads related to Artificial Intelligence, but rather multiple entities that are involved in or impacted by AI.","Based on the provided context, the following companies and technologies lead related to Artificial Intelligence:
+
+1. Microsoft [Company] -LEADS-> Artificial Intelligence [Technology] [chunk_id=65c64500f187c085a867092b::c0000 | date=2023-07-11]
+2. Microsoft [Company] -LEADS-> AI Services [Technology] [chunk_id=65c64090f187c085a866fbbd::c0000 | date=2023-08-13]
+
+Additionally, the following companies and technologies are related to Artificial Intelligence:
+
+1. Google [Company] -USES-> tool for managing personal information online [Technology] [chunk_id=65c644d7f187c085a86708c3::c0000 | date=2023-08-04]
+2. Google [Company] -USES-> EU [Technology] [chunk_id=65c63f93f187c085a866f8d5::c0000 | date=2023-01-27]
+3. Google [Company] -LEADS-> EU users [Technology] [chunk_id=65c63f93f187c085a866f8d5::c0000 | date=2023-01-27]
+4. OpenAI [Company] -LEVERAGED-> by Syneos Health [Company] [chunk_id=65c64063f187c085a866fb49::c0000 | date=2023-03-20]
+5. KPMG [Company] -PARTNERED_WITH-> Microsoft [Company] [chunk_id=65c64500f187c085a867092b::c0000 | date=2023-07-11]
+6. Options [Company] -PARTNERED_WITH-> Microsoft [Company] [chunk_id=65c640d6f187c085a866fc9b::c0000 | date=2023-06-08]
+7. Syneos Health [Company] -PARTNERED_WITH-> Microsoft [Company] [chunk_id=65c64063f187c085a866fb49::c0000 | date=2023-03-20]
+8. Docker [Technology] -DEVELOPED-> software and services development [Technology] [chunk_id=65c63ea9f187c085a866f68e::c0000 | date=2023-02-28]
+9. Kubernetes [Technology] -DEVELOPED-> software and services development [Technology] [chunk_id=65c63ea9f187c085a866f68e::c0000 | date=2023-02-28]",5,2,5,5,5,1,5.778576799901202,8.18469320004806,888,2615,"The candidate answer accurately reflects the context provided, acknowledging that there is no single entity that leads related to Artificial Intelligence. Instead, it lists multiple entities that are involved in or impacted by AI, such as Charles Darwin University, financial services institutions, companies that sell AI-related hardware and software, and the technology industry. The answer demonstrates a thorough understanding of the context and provides a comprehensive list of entities related to AI. The answer also shows faithfulness to the context by not making any incorrect assumptions or inferences. The multi-hop reasoning is accurate as it requires the candidate to understand the relationships between different entities and concepts in the context.","The candidate answer is mostly faithful to the reference answer, but it lacks comprehensiveness as it only mentions Microsoft LEADS Artificial Intelligence. The multi-hop reasoning is accurate as it correctly identifies the relationship between Microsoft and Artificial Intelligence through various partners and technologies.",0
+G02,multi-hop,Which company was founded (or related via FOUNDED) and which investment edge exists in the graph?,FOUNDED: Dragos -> Dragos Partner Program. INVESTED_IN: SYNLAB -> Healthcare Centre in Florence.,"Based on the provided context, the following information can be deduced:
+
+1. The company founded is NYMBUS [chunk_id=65c63facf187c085a866f92f::c0000].
+2. The investment edge in the graph is not explicitly mentioned. However, Information Services Group Inc. (NASDAQ:III) is mentioned as a favorite amongst institutional investors, indicating that it may have a strong investment edge [chunk_id=65c6406cf187c085a866fb6c::c0000 and chunk_id=65c64027f187c085a866faac::c0000].","Based on the provided context, the following information can be deduced:
+
+1. **Company founded or related via FOUNDED**: 
+   - There is no information in the provided context about a company being founded.
+
+2. **Investment edge exists in the graph**: 
+   - The investment edge is not explicitly mentioned in the provided context. However, the graph contains information about partnerships and investments, such as:
+     - KPMG [Company] -PARTNERED_WITH-> Microsoft [Company] | date=2023-07-11 | chunk=65c64500f187c085a867092b::c0000 | evidence=KPMG said on Tuesday it will spend $2 billion on artificial intelligence and cloud services through an expanded partnership with Microsoft (MSFT.O)
+     - Dish Network [Company] -PARTNERED_WITH-> Amazon [Company] | date=2023-07-26 | chunk=65c64083f187c085a866fba1::c0000 | evidence=Dish Network partners with Amazon to offer wireless services.
+     - Google [Company] -PARTNERED_WITH-> Verizon [Company] | date=2023-09-21 | chunk=65c644fbf187c085a8670921::c0000 | evidence=paying companies such as Verizon
+     - Google [Company] -PARTNERED_WITH-> Apple [Company] | date=2023-09-21 | chunk=65c644fbf187c085a8670921::c0000 | evidence=paying companies such as Apple",1,1,1,1,1,1,4.648216099943966,6.8712891000323,805,2345,"The candidate accurately identifies the company founded as NYMBUS, which is directly mentioned in the context. However, the investment edge is not explicitly mentioned in the context, but the candidate incorrectly infers it from unrelated information about Information Services Group Inc. The candidate fails to identify the investment edge related to SYNLAB as mentioned in the reference answer.","The candidate answer fails to provide any information about a company being founded or related via FOUNDED. Additionally, the investment edge is not explicitly mentioned in the provided context. The candidate's response is based on unrelated information and does not address the question's requirements.",0
+G03,cross-doc,"Compare Google's default-search partnerships with Apple versus Verizon using evidence from the news coverage.","Google PARTNERED_WITH Apple (date=2023-09-21, chunk=65c644fbf187c085a8670921::c0000). Google PARTNERED_WITH Verizon (date=2023-09-21, chunk=65c644fbf187c085a8670921::c0000).","Based on the provided context, here are the relations involving Google:
+
+1. **Google and Antitrust Trial**: Google is involved in an antitrust trial where the US argues that Google wants too much information kept secret [chunk_id=65c63f0bf187c085a866f781::c0000].
+2. **Google and Social Media Liability**: The Supreme Court ruled in favor of Google, along with Twitter and Facebook, in lawsuits seeking to hold them liable for terrorist attacks [chunk_id=65c644f8f187c085a867091a::c0000].
+3. **Google and Competition**: The US Department of Justice argues that Google has smothered competition by paying companies to lock in its search engine as the default choice [chunk_id=65c644fbf187c085a8670921::c0000].
+4. **Google and User Privacy**: Google has made it easier for users to find and remove their personal information online, improving user privacy [chunk_id=65c644d7f187c085a86708c3::c0000].
+5. **Google and AI Competition**: Google is competing with Amazon in the AI service market, with Amazon announcing new AI tools and a program for building conversational customer-service agents [chunk_id=65c64400f187c085a8670612::c0000].
+6. **Google and EU User Information**: Google has agreed to provide clearer information to users browsing Google Store, Google Play Store, Google Hotels, and Google Flights in Europe [chunk_id=65c63f93f187c085a866f8d5::c0000].
+
+Note that the evidence is insufficient to determine the exact nature of the relations between Google and other companies, such as Apple and Verizon, mentioned in [chunk_id=65c644fbf187c085a8670921::c0000].","Based on the provided context, here are the relations involving Google and Google:
+
+1. **Google partnered with Verizon and Apple**: Google [Company] -PARTNERED_WITH-> Verizon [Company] and Google [Company] -PARTNERED_WITH-> Apple [Company] [chunk=65c644fbf187c085a8670921::c0000]
+2. **Google uses various technologies**: Google [Company] -USES-> tool for managing personal information online [Technology], Google [Company] -USES-> EU [Technology], Google [Company] -USES-> Google Play Store [Technology], and Google [Company] -USES-> bank cards [Technology]
+3. **Google leads EU users**: Google [Company] -LEADS-> EU users [Technology] [chunk=65c63f93f187c085a866f8d5::c0000]
+4. **Google's business practices are under scrutiny**: The US argues that Google wants too much information kept secret in an antitrust trial [chunk_id=65c63f0bf187c085a866f781::c0000]
+5. **Google is not held liable for terrorist attacks**: The Supreme Court sided with Google, Twitter, and Facebook in lawsuits seeking to hold them liable for terrorist attacks [chunk_id=65c644f8f187c085a867091a::c0000]
+6. **Google's partnerships thwart competition**: Google's phone and manufacturing partnerships, including those with Apple and Verizon, are seen as a way to smother competition [chunk_id=65c644fbf187c085a8670921::c0000]
+
+Note that some of these relations are based on the opinions and arguments presented in the provided context, rather than objective facts.",5,5,5,5,5,5,10.670894399983808,6.00210090004839,1039,1272,"The candidate answer accurately identifies multiple relations involving Google, including its involvement in an antitrust trial, social media liability, competition, user privacy, and AI competition. It also correctly identifies the lack of evidence to determine the exact nature of the relations between Google and other companies, such as Apple and Verizon. The candidate answer demonstrates a thorough understanding of the provided context and accurately extracts relevant information to support its claims.",The candidate's answer is comprehensive as it covers all the relations involving Google and Google from the reference answer. It is faithful to the supplied candidate context as it accurately represents the relations and their corresponding evidence. The multi-hop reasoning is accurate as it correctly identifies the relations and their connections to the evidence from multiple chunks.,0
+G04,multi-hop,"Identify an INVESTED_IN relation and a DEVELOPED relation, including dates.",SYNLAB INVESTED_IN Healthcare Centre in Florence on 2023-06-28; Dragos DEVELOPED ICS/OT cybersecurity technology and services on 2023-06-13.,"Based on the provided context, I found the following INVESTED_IN and DEVELOPED relations:
+
+1. INVESTED_IN: 
+Piper Sandler upgrades Coty, citing China exposure could boost beauty stocks. [chunk_id=65c6415ef187c085a866fdd2::c0000 | date=2022-12-22 | score=0.287]
+
+2. DEVELOPED:
+Invision Technologies: Building relationships empowering communities. Although there are multiple reasons Albany’s Invision Technologies LLC has distinguished itself as one of the area’s leading technology companies it’s clear the company’s focus on relationship building has been a key factor in its success. [chunk_id=65c63f8bf187c085a866f8b5::c0000 | date=2023-10-28 | score=0.274]
+
+Note: The dates provided are based on the available information and may not be comprehensive.","Based on the provided context, I can identify the following relations:
+
+1. **INVESTED_IN relation:**
+   - Google [Company] -INVESTED_IN-> Information Services Group [Company] | date=2023-05-25 | chunk=chunk_id=65c63fcff187c085a866f999::c0000 | score=0.305
+
+   This relation is not explicitly stated in the context, but it can be inferred from the vector chunk that mentions Information Services Group.
+
+2. **DEVELOPED relation:**
+   - Google [Company] -DEVELOPED-> tool for managing personal information online [Technology] | date=2023-08-04 | chunk=65c644d7f187c085a86708c3::c0000 | evidence=Google steps up user privacy with tool for managing personal information online.
+
+   This relation is explicitly stated in the context, where Google is mentioned as developing a tool for managing personal information online.",1,1,1,1,1,1,6.154438900062814,9.071111800149083,841,1110,"The candidate failed to identify the correct INVESTED_IN and DEVELOPED relations as mentioned in the reference. The provided relations do not match the ones in the reference, and the candidate's relations are not supported by the context. The candidate's answer is not faithful to the supplied candidate context.","The candidate's answer is not faithful to the context as it introduces a new relation (Google -INVESTED_IN-> Information Services Group) that is not present in the context. The correct INVESTED_IN relation is SYNLAB -INVESTED_IN-> Healthcare Centre in Florence. The candidate's answer for the DEVELOPED relation is partially correct, but it does not include the correct date (2023-06-13) as mentioned in the reference answer.",0
+G05,cross-doc,How is Intel connected to Intel Foundry Services across news chunks over time?,Intel DEVELOPED Intel Foundry Services on 2023-08-14 [65c63eccf187c085a866f6e3::c0000] and later USES on 2023-08-15 [65c63ed0f187c085a866f6f3::c0000].,"Intel is connected to Intel Foundry Services (IFS) through strategic partnerships, particularly with Synopsys. 
+
+According to [chunk_id=65c63eccf187c085a866f6e3::c0000 | date=2023-08-14 | score=0.484], Intel partnered with Synopsys for a comprehensive IP deal to bolster IFS's credibility as a major foundry player.
+
+Additionally, [chunk_id=65c63ed0f187c085a866f6f3::c0000 | date=2023-08-15 | score=0.463] states that Intel and Synopsys expanded their partnership to develop a portfolio of intellectual property (IP) for Intel Foundry Services.
+
+There is no direct information in the provided context about Intel's connection to IFS beyond these partnerships.","Intel is connected to Intel Foundry Services across news chunks over time as follows:
+
+- Intel uses/develops Intel Foundry Services [Technology] (chunk_id=65c63eccf187c085a866f6e3::c0000, date=2023-08-14) [1]
+- Intel partners with Synopsys to develop a portfolio of intellectual property (IP) for Intel Foundry Services (chunk_id=65c63ed0f187c085a866f6f3::c0000, date=2023-08-15) [2]
+- Intel and Synopsys have expanded a partnership to develop a portfolio of intellectual property (IP) for Intel Foundry Services (chunk_id=65c63ed0f187c085a866f6f3::c0000, date=2023-08-15) [2]
+- Intel uses/develops Intel Foundry Services [Technology] (chunk_id=65c63eccf187c085a866f6e3::c0000, date=2023-08-14) [1]
+
+Provenance:
+[1] chunk_id=65c63eccf187c085a866f6e3::c0000 | date=2023-08-14 | evidence=Intel Synopsys Cut Comprehensive IP Deal For Intel Foundry Services.
+[2] chunk_id=65c63ed0f187c085a866f6f3::c0000 | date=2023-08-15 | evidence=Intel and Synopsys have expanded a partnership to develop a portfolio of intellectual property (IP) for Intel Foundry Services.",5,1,5,1,5,1,5.058920199982822,4.614287200151011,753,1111,"The candidate answer accurately describes Intel's connection to Intel Foundry Services (IFS) through strategic partnerships with Synopsys. It provides specific dates and details from the reference context, demonstrating a thorough understanding of the relationship between Intel and IFS. The answer also correctly states that there is no direct information in the provided context about Intel's connection to IFS beyond these partnerships, showcasing its ability to reason across multiple chunks of information.",The candidate answer accurately captures the relationship between Intel and Intel Foundry Services across news chunks over time. It correctly identifies the development of Intel Foundry Services on 2023-08-14 and the partnership with Synopsys to develop a portfolio of intellectual property (IP) for Intel Foundry Services on 2023-08-15. The answer is faithful to the supplied candidate context and accurately represents the multi-hop reasoning required to understand the relationship between the two entities.,0

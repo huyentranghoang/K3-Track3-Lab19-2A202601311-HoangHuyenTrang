@@ -1,0 +1,20 @@
+{
+  "articles": 1500,
+  "chunks": 1500,
+  "extraction_chunks": 80,
+  "triples": 121,
+  "audit_rows": 6,
+  "graph": {
+    "nodes": 170,
+    "edges": 121,
+    "invalid_provenance_edges": 0
+  },
+  "supernode": {
+    "name": "Microsoft",
+    "degree": 13,
+    "fetched": 13,
+    "capped": false
+  },
+  "coref_unresolved_batches": 80,
+  "communities": 55
+}
