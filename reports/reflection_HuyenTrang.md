@@ -1,6 +1,6 @@
 # Reflection cá nhân — Lab 19 GraphRAG vs Flat RAG
 
-**Học viên:** Huyen Trang (Hoang)  
+**Học viên:** **Hoàng** Huyền Trang - 2A202601311  
 **Khóa học:** AICB-K34 · Track 3: GraphRAG  
 **Ngày:** 19/08/2026  
 
@@ -8,20 +8,24 @@
 
 ## 1. Mapping bài giảng vào code
 
-| Khái niệm trong bài giảng | Module | Hàm / khối code | Quan sát |
-|--------------------------|--------|-----------------|----------|
-| Conservative Coreference | M1 | `resolve_coref_batch()`, `run_coref()` | Ambiguous pronouns được log, không bịa antecedent |
-| Schema & Allowlist Guard | M2 | `ALLOWED_NODE_TYPES`, `ALLOWED_RELATIONS` | Loại relation lạ trước Cypher |
-| Bulk Cypher Ingestion | M2 | `bulk_insert_nodes()`, `bulk_insert_edges()` | `UNWIND $rows AS row`, batch 1000; 0 cạnh thiếu provenance |
-| Entity Resolution & Union-Find | M3 | `build_resolution_map()`, `UF`, `merge_guard()` | Threshold 0.90 + guard substring/person-name |
-| Super-node Degree Cap | M4 | `retrieve_graph_context()`, `test_supernode_policy()` | Policy đúng; subset nhỏ chưa kích hoạt degree>100 |
-| LLM-as-a-Judge | M5 | `judge_answer()`, `run_evaluation()` | 5 câu × 3 tiêu chí; 2 CSV eval |
+
+| Khái niệm trong bài giảng      | Module | Hàm / khối code                                       | Quan sát                                                   |
+| ------------------------------ | ------ | ----------------------------------------------------- | ---------------------------------------------------------- |
+| Conservative Coreference       | M1     | `resolve_coref_batch()`, `run_coref()`                | Ambiguous pronouns được log, không bịa antecedent          |
+| Schema & Allowlist Guard       | M2     | `ALLOWED_NODE_TYPES`, `ALLOWED_RELATIONS`             | Loại relation lạ trước Cypher                              |
+| Bulk Cypher Ingestion          | M2     | `bulk_insert_nodes()`, `bulk_insert_edges()`          | `UNWIND $rows AS row`, batch 1000; 0 cạnh thiếu provenance |
+| Entity Resolution & Union-Find | M3     | `build_resolution_map()`, `UF`, `merge_guard()`       | Threshold 0.90 + guard substring/person-name               |
+| Super-node Degree Cap          | M4     | `retrieve_graph_context()`, `test_supernode_policy()` | Policy đúng; subset nhỏ chưa kích hoạt degree>100          |
+| LLM-as-a-Judge                 | M5     | `judge_answer()`, `run_evaluation()`                  | 5 câu × 3 tiêu chí; 2 CSV eval                             |
+
 
 Bonus: `near_dedup()` (SimHash LSH); `build_communities()` (55 community + `community_id` UNWIND + community reports); `self_correcting_context()` (hop2 → hop3 → vector fallback).
 
 Pipeline local: `run_lab19.py` (cùng logic notebook, cache CSV để tránh gọi lại LLM).
 
 ---
+
+
 
 ## 2. Debugging & bài học
 
@@ -37,6 +41,8 @@ Bài học: GraphRAG không tự thắng Flat RAG nếu extraction thưa hoặc 
 
 ---
 
+
+
 ## 3. Action plan đồ án
 
 - **Bài toán:** Tra cứu quan hệ công ty / tin M&A–đầu tư, hoặc đồ án nội bộ có thực thể–quan hệ rõ.
@@ -46,13 +52,17 @@ Bài học: GraphRAG không tự thắng Flat RAG nếu extraction thưa hoặc 
 
 ---
 
+
+
 ## Tự đánh giá
 
-| Tiêu chí | 1–5 | Ghi chú |
-|----------|-----|---------|
-| Hiểu GraphRAG | 4 | E2E, đo noisy-subgraph và missing-path |
-| Kiểm soát agent | 4 | Từ chối O(N²) và full 350MB |
-| Chất lượng KG | 3 | 121 cạnh / 0 thiếu provenance; graph thưa |
-| Debug hệ thống | 4 | Resume cache, encoding Windows, judge vs qualitative |
+
+| Tiêu chí        | 1–5 | Ghi chú                                              |
+| --------------- | --- | ---------------------------------------------------- |
+| Hiểu GraphRAG   | 4   | E2E, đo noisy-subgraph và missing-path               |
+| Kiểm soát agent | 4   | Từ chối O(N²) và full 350MB                          |
+| Chất lượng KG   | 3   | 121 cạnh / 0 thiếu provenance; graph thưa            |
+| Debug hệ thống  | 4   | Resume cache, encoding Windows, judge vs qualitative |
+
 
 Môi trường: 5000 rows stream → exact dedup 4976→2287 → SimHash 2285; 1500 articles / 1500 chunks; extract 80 chunks. Neo4j local `bolt://localhost:7687`. Không hard-code API key.

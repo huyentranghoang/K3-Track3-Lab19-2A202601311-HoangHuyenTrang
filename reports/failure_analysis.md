@@ -1,6 +1,6 @@
 # Phân tích ca lỗi — Flat RAG vs GraphRAG
 
-**Học viên:** Huyen Trang  
+**Học viên:** Hoàng Huyền Trang - 2A202601311
 **Nguồn điểm:** `outputs/graphrag_eval_results.csv` (LLM-as-a-Judge, 5 câu G01–G05)
 
 ---
